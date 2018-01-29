@@ -1,0 +1,60 @@
+html {
+    background-color: black;
+}
+
+body {
+    margin: auto;
+    padding-top: 10px;
+    width: 960px;
+}
+
+section {
+    display: flex;
+}
+
+section div {
+    width: 16px;
+    height: 16px;
+    border: solid #888888 .25px;
+    box-sizing: border-box;
+}
+
+aside {
+    display: flex;
+}
+
+aside div {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    border: solid #888888 .5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+button {
+  font-family: sans-serif;
+  padding: 15px 25px;
+  background-color: rgb(28, 100, 156);
+  background-image: linear-gradient(rgb(28, 100, 156),rgb(23, 118, 132));
+  color: white;
+  font-size: 25px;
+  font-weight: 100;
+  margin-left: 36px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 920px) {
+    body {
+        width: 920px;
+    }
+}
+
+@media (max-height: 740px) {
+    body {
+        height: 740px;
+    }
+}
