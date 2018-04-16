@@ -1,4 +1,9 @@
-# Pixel Art Maker
+# Pixel Art Generator
+
+## View Live
+https://pixel-art-generator.surge.sh/
+
+## Original Challenge Instructions
 
 In this exercise, you'll create your own pixel art maker which will allow a user to choose colors from a palette and then paint pixel art. The interface is completely up to you, but it could look something like this.
 
@@ -20,4 +25,4 @@ To accomplish this, you will have to:
 * You'll likely change ./css/style.css, and maybe index.html as well!
 
 * Deploy your app!
-* Paste link to deployed app here: http://pixel-art-generator.surge.sh/
+* Paste link to deployed app here: https://pixel-art-generator.surge.sh/

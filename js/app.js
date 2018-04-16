@@ -1,15 +1,15 @@
-var selectedColor = "red";
+let selectedColor = "red";
 document.querySelector("#clear").addEventListener("click", clearPalette);
 createCanvas();
 
-function createCanvas() {
+createCanvas = () => {
     createRows();
     populateWithDivs();
     createPalette();
     highlightSelectedColor()
 };
 
-function createRows() {
+createRows = () => {
     for(let i = 0; i < 40; i++) {
         let newSection = document.createElement("section");
         newSection.id = `row ${i}`;
@@ -17,7 +17,7 @@ function createRows() {
     }
 }
 
-function populateWithDivs() {
+populateWithDivs = () => {
     document.querySelectorAll("section").forEach(section => {
         for(let i = 0; i < 60; i++) {
             let newDiv = document.createElement("div");
@@ -30,14 +30,14 @@ function populateWithDivs() {
     })
 }
 
-function createPalette() {
+createPalette = () => {
     document.querySelectorAll(".color").forEach(div => {
         div.style.backgroundColor = div.id;
         div.addEventListener("click", changeSelectedColor);
     })
 }
 
-function highlightSelectedColor() {
+highlightSelectedColor = () => {
     document.querySelectorAll(".color").forEach(color => {
         color.style.borderWidth = ".5px";
         if(color.id === selectedColor) {
@@ -46,17 +46,17 @@ function highlightSelectedColor() {
     })
 }
 
-function changeSelectedColor(event) {
+changeSelectedColor = event => {
     selectedColor = event.target.id;
     highlightSelectedColor()
 }
 
-function colorSquare(event) {
+colorSquare = event => {
     if(event.type === "mouseover" && event.buttons === 0) return;
     event.target.style.backgroundColor = selectedColor
 }
 
-function clearPalette() {
+clearPalette = () => {
     if(confirm("Are you sure you want to clear the canvas?")) {
         document.querySelector("#canvas").innerHTML = "";
         createCanvas()
